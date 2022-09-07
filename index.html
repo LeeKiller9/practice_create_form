@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto Slab', serif;
+            width:50%;
+        }
+        .red{
+            color: red;
+        }
+        legend{
+            background-color: gray;
+            color:white;
+        }
+        fieldset {
+            background-color: lightgray;
+        }
+        input[type=text], input[type=email], input[type=number],input[type=submit], select {
+            display: inline-block;
+            width: 100%;
+        }
+        input[type=radio] {
+            margin-right: 10px;
+        }
+        input[type=submit]
+        {
+            margin-top: 10px;
+            background-color: greenyellow;
+        }
+        .heading{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        #search_form{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" name="order_form" method="get">
+        <fieldset>
+            <legend>Order Form</legend>
+            <label>What would you like to buy?
+                <select name="kind_product">
+                    <option value="a">Product A</option>
+                    <option value="b">Product B</option>
+                    <option value="c">Product C</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label class="heading">How many would you like to order?</label>
+            <input type="radio" name="amount" id="1_10$"><label for="1_10$">1 - $10</label>
+            <br>
+            <input type="radio" name="amount" id="2_20$"><label for="2_20$">2 - $20</label>
+            <br>
+            <input type="radio" name="amount" id="3_25$"><label for="3_25$">3 - $25</label>
+            <br>
+        </fieldset>
+        <fieldset>
+            <label class="heading" for="name">Name<span class="red">*</span></label>
+            <input type="text" id="name" placeholder="John" required>
+            <label class="heading" for="email">Email</label>
+            <input type="email" id="email" placeholder="abc@gmail.com">
+            <label class="heading" for="phone">Phone number</label>
+            <input type="text" id="phone" pattern="[0-9]{10}" placeholder="012345678" title="0-9, 9 characters">
+            <input type="submit" value="Send">
+        </fieldset>
+    </form>
+    <form action="https://www.google.com/search" id="search_form">
+        <label for="search">Search infomation</label>
+        <input type="text" name="q" id="search">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
